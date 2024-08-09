@@ -33,18 +33,6 @@ connection.connect(err => {
 app.use(express.static(path.join(__dirname, 'views')));
 app.use('/icons', express.static(path.join(__dirname, 'icons')));
 
-// Rutas
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html'));
-});
-
-app.get('/ordencompra', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'ordencompra.html'));
-});
-
-app.get('/ordencompra1', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'ordencompra1.html'));
-});
 
 // Rutas de la API
 // Endpoint para obtener todos los usuarios con su foto
